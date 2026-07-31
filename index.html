@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Estrellita ✨</title>
+
+<title>Para mi estrellita ✨</title>
 
 <style>
 
@@ -14,10 +16,10 @@
 }
 
 body{
-    font-family: Georgia, serif;
-    background: linear-gradient(to bottom,#050816,#0d1b2a,#1b263b);
     min-height:100vh;
     overflow:hidden;
+    font-family:Georgia, serif;
+    background:linear-gradient(#050816,#0b1d33,#13294b);
 }
 
 /* ESTRELLAS */
@@ -25,245 +27,683 @@ body{
 .star{
     position:fixed;
     color:white;
-    animation:brillar 3s infinite alternate;
-    pointer-events:none;
+    font-size:20px;
+    animation:brillo 3s infinite alternate;
 }
 
-@keyframes brillar{
+@keyframes brillo{
+
     from{
         opacity:.2;
         transform:scale(.8);
     }
+
     to{
         opacity:1;
-        transform:scale(1.3);
+        transform:scale(1.4);
     }
+
 }
+
 
 /* PORTADA */
 
-#cover{
-    width:100%;
+#portada{
+
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     color:white;
-    padding:20px;
+    padding:25px;
+
 }
 
-.cover-box{
+
+.contenido-portada{
+
     max-width:800px;
+    animation:aparecer 2s;
+
 }
 
-.cover-box h1{
-    font-size:4rem;
-    margin-bottom:20px;
+
+@keyframes aparecer{
+
+from{
+    opacity:0;
+    transform:translateY(40px);
 }
 
-.cover-box .frase{
-    font-size:1.3rem;
-    font-style:italic;
-    margin-bottom:30px;
+to{
+    opacity:1;
+    transform:translateY(0);
 }
 
-.cover-box p{
-    line-height:1.8;
-    font-size:1.1rem;
 }
 
-.btn{
-    margin-top:40px;
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:18px;
-    background:white;
+
+
+h1{
+
+font-size:55px;
+margin-bottom:25px;
+
 }
 
-.btn:hover{
-    transform:scale(1.05);
+
+
+.frase{
+
+font-size:22px;
+font-style:italic;
+line-height:1.6;
+margin-bottom:25px;
+
 }
+
+
+
+.descripcion{
+
+font-size:18px;
+line-height:1.8;
+
+}
+
+
+
+button{
+
+margin-top:35px;
+padding:15px 35px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+background:white;
+color:#13294b;
+transition:.3s;
+
+}
+
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
 
 /* LIBRO */
 
-#book{
-    display:none;
-    width:100%;
-    height:100vh;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
+#libro{
+
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+
 }
 
-.page{
-    background:white;
-    width:90%;
-    max-width:900px;
-    min-height:500px;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 0 25px rgba(0,0,0,.3);
-    display:none;
+
+.pagina{
+
+display:none;
+
+background:white;
+
+width:90%;
+max-width:850px;
+
+min-height:520px;
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:0 10px 40px rgba(0,0,0,.4);
+
+text-align:center;
+
 }
 
-.page.active{
-    display:block;
+
+
+.pagina.activa{
+
+display:block;
+
 }
 
-.page h2{
-    color:#1b263b;
-    margin-bottom:20px;
+
+
+.pagina h2{
+
+color:#13294b;
+
+font-size:32px;
+
+margin-bottom:25px;
+
 }
 
-.page p{
-    line-height:1.8;
+
+
+.pagina p{
+
+font-size:19px;
+
+line-height:1.8;
+
+color:#333;
+
 }
 
-.nav{
-    margin-top:30px;
-    display:flex;
-    justify-content:space-between;
+
+
+.navegacion{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:space-between;
+
 }
 
-.nav button{
-    padding:10px 20px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+
+
+.navegacion button{
+
+background:#13294b;
+
+color:white;
+
+margin:0;
+
+padding:12px 25px;
+
 }
+
+
 
 </style>
+
 </head>
+
+
 <body>
 
-<div id="stars"></div>
+
+<div id="estrellas"></div>
+
+
 
 <!-- PORTADA -->
 
-<div id="cover">
+<section id="portada">
 
-<div class="cover-box">
+<div class="contenido-portada">
 
-<h1>✨ Mi Estrellita ✨</h1>
+
+<h1>✨ Para mi estrellita ✨</h1>
+
 
 <div class="frase">
+
 "A veces una estrella no ilumina todo el cielo,
 pero sí el camino de alguien que lo necesita."
+
 </div>
 
-<p>
+
+
+<div class="descripcion">
+
 Algunas personas llegan a nuestra vida cuando menos lo esperamos.
-Y aunque llevemos poco tiempo conociéndonos,
-dejan una huella que vale la pena recordar.
+
+Aunque llevemos poco tiempo conociéndonos,
+pueden convertirse en alguien especial y dejar una huella bonita.
+
+Este pequeño libro guarda algunos recuerdos,
+pensamientos y agradecimientos para ti.
+
+</div>
+
+
+
+<button onclick="abrirLibro()">
+
+Abrir libro 📖
+
+</button>
+
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- LIBRO -->
+
+<section id="libro">
+
+<div class="pagina activa">
+
+<h2>📖 Cómo nos conocimos</h2>
+
+<p>
+Aquí puedes escribir cómo nos conocimos en el campamento municipal,
+cómo fue ese momento y cómo empezamos a hablar.
 </p>
 
-<button class="btn" onclick="abrirLibro()">
-Abrir Libro 📖
+<div class="navegacion">
+
+<button disabled>
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
 </button>
 
 </div>
 
 </div>
 
-<!-- LIBRO -->
 
-<div id="book">
 
-<div class="page active">
-
-<h2>📖 Cómo nos conocimos</h2>
-
-<p>
-AQUÍ ES DONDE VAS A ESCRIBIR
-CÓMO SE CONOCIERON EN EL CAMPAMENTO.
-</p>
-
-<div class="nav">
-<button disabled>⬅ Anterior</button>
-<button onclick="nextPage()">Siguiente ➡</button>
-</div>
-
-</div>
-
-<div class="page">
+<div class="pagina">
 
 <h2>✨ Mi primera impresión de ti</h2>
 
 <p>
-AQUÍ ESCRIBES TU PRIMERA IMPRESIÓN DE ELLA.
+Aquí puedes escribir qué fue lo primero que notaste de ella,
+qué pensaste al conocerla y qué llamó tu atención.
 </p>
 
-<div class="nav">
-<button onclick="prevPage()">⬅ Anterior</button>
-<button onclick="nextPage()">Siguiente ➡</button>
-</div>
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
 
 </div>
 
 </div>
+
+
+
+<div class="pagina">
+
+<h2>💬 Lo que me gusta de hablar contigo</h2>
+
+<p>
+Aquí puedes escribir lo que disfrutas de sus conversaciones,
+lo bien que se sienten esos momentos y lo especial que es compartir.
+</p>
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="pagina">
+
+<h2>🏕️ Recuerdos del campamento</h2>
+
+<p>
+Aquí van los momentos divertidos,
+las experiencias que compartieron y los recuerdos que más valoras.
+</p>
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="pagina">
+
+<h2>⭐ Cosas que he descubierto de ti</h2>
+
+<p>
+Aquí puedes escribir las cosas bonitas que has aprendido de ella:
+su forma de ser, sus cualidades y lo que admiras.
+</p>
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+<div class="pagina">
+
+<h2>🌙 Lo que me gustaría seguir conociendo de ti</h2>
+
+<p>
+Me gustaría seguir conociendo tus sueños, tus metas,
+tus gustos, tus historias y todas esas pequeñas cosas
+que hacen que seas una persona especial.
+</p>
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+
+
+<div class="pagina">
+
+<h2>✨ Mi Estrellita ✨</h2>
+
+<p>
+"A veces una estrella no ilumina todo el cielo,
+pero sí el camino de alguien que lo necesita."
+</p>
+
+<br>
+
+<p>
+Tal vez no lo sepas, pero llegaste a mi vida en un momento
+en el que muchas cosas parecían oscuras y confusas.
+Poco a poco, con tu forma de ser, tus palabras y tu compañía,
+fuiste convirtiéndote en una pequeña luz que me ayudó
+a ver las cosas de una manera diferente.
+</p>
+
+<br>
+
+<p>
+Por eso te llamo mi estrellita.
+
+No porque seas perfecta, sino porque,
+así como las estrellas iluminan la noche,
+tu presencia ha logrado iluminar momentos importantes para mí.
+
+Aunque llevemos poco tiempo de conocernos,
+has dejado una huella que valoro mucho.
+</p>
+
+<br>
+
+<p>
+Gracias por llegar a mi vida cuando más lo necesitaba,
+mi estrellita. ✨
+</p>
+
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+
+
+<div class="pagina">
+
+<h2>💛 Gracias</h2>
+
+<p>
+Gracias por escucharme, por compartir momentos conmigo,
+por cada conversación y por hacer más especiales algunos días.
+
+Gracias por llegar a mi vida y permitirme conocerte poco a poco.
+</p>
+
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+    <div class="pagina">
+
+<h2>🌠 Lo que espero para el futuro</h2>
+
+<p>
+Espero que sigamos compartiendo momentos,
+conversaciones y nuevas experiencias.
+
+Que podamos seguir conociéndonos poco a poco
+y creando recuerdos bonitos que valga la pena guardar.
+
+No sé qué nos depare el futuro,
+pero sí sé que me alegra mucho haberte conocido.
+</p>
+
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="pagina">
+
+<h2>💌 Carta final</h2>
+
+<p>
+Gracias por llegar a mi vida cuando menos lo esperaba.
+
+Tal vez llevamos poco tiempo de conocernos,
+pero has logrado hacer esta etapa más especial.
+
+Gracias por cada conversación,
+por cada momento compartido y por permitirme conocerte un poco más.
+
+No sé qué nos tenga preparado el futuro,
+pero me alegra mucho haberte conocido.
+
+Gracias por ser esa pequeña luz que apareció
+cuando más la necesitaba.
+</p>
+
+<br>
+
+<p>
+Con cariño,
+
+<br><br>
+
+<strong>Julian ✨</strong>
+</p>
+
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Siguiente ➡
+</button>
+
+</div>
+
+</div>
+
+
+
+
+<div class="pagina">
+
+<h2>🎁 Una última sorpresa ✨</h2>
+
+<p>
+A veces las personas aparecen cuando menos lo esperamos.
+
+Gracias por formar parte de esta etapa de mi vida,
+mi estrellita.
+
+✨ ⭐ ✨
+</p>
+
+
+<div class="navegacion">
+
+<button onclick="anterior()">
+⬅ Anterior
+</button>
+
+<button onclick="siguiente()">
+Final ➡
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+
 
 <script>
 
+
+// CREAR ESTRELLAS
+
 for(let i=0;i<100;i++){
 
-let star=document.createElement("div");
+let estrella=document.createElement("div");
 
-star.className="star";
-star.innerHTML="✦";
+estrella.className="star";
 
-star.style.left=Math.random()*100+"vw";
-star.style.top=Math.random()*100+"vh";
-star.style.fontSize=(Math.random()*15+8)+"px";
-star.style.animationDelay=Math.random()*3+"s";
+estrella.innerHTML="✦";
 
-document.getElementById("stars").appendChild(star);
+estrella.style.left=Math.random()*100+"vw";
+
+estrella.style.top=Math.random()*100+"vh";
+
+estrella.style.animationDelay=Math.random()*4+"s";
+
+document
+.getElementById("estrellas")
+.appendChild(estrella);
 
 }
+
+
+
 
 function abrirLibro(){
 
-document.getElementById("cover").style.display="none";
+document.getElementById("portada").style.display="none";
 
-document.getElementById("book").style.display="flex";
-
-}
-
-const pages=document.querySelectorAll(".page");
-
-let current=0;
-
-function nextPage(){
-
-if(current<pages.length-1){
-
-pages[current].classList.remove("active");
-
-current++;
-
-pages[current].classList.add("active");
+document.getElementById("libro").style.display="flex";
 
 }
 
+let paginaActual = 0;
+
+let paginas = document.querySelectorAll(".pagina");
+
+
+function siguiente(){
+
+    if(paginaActual < paginas.length - 1){
+
+        paginas[paginaActual].classList.remove("activa");
+
+        paginaActual++;
+
+        paginas[paginaActual].classList.add("activa");
+
+    }
+
 }
 
-function prevPage(){
 
-if(current>0){
+function anterior(){
 
-pages[current].classList.remove("active");
+    if(paginaActual > 0){
 
-current--;
+        paginas[paginaActual].classList.remove("activa");
 
-pages[current].classList.add("active");
+        paginaActual--;
 
-}
+        paginas[paginaActual].classList.add("activa");
+
+    }
 
 }
 
 </script>
+
 
 </body>
 </html>
