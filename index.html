@@ -633,11 +633,11 @@ Final ➡
 
 <h2>🌌 Tu propia constelación ✨</h2>
 
-    <div style="
+<div style="
 position:relative;
-height:220px;
+height:260px;
 width:350px;
-margin:auto;
+margin:20px auto;
 ">
 
 <div style="
@@ -645,6 +645,7 @@ position:absolute;
 top:20px;
 left:80px;
 font-size:25px;
+animation:brillo 2s infinite alternate;
 ">
 ✨
 </div>
@@ -654,6 +655,7 @@ position:absolute;
 top:90px;
 left:30px;
 font-size:25px;
+animation:brillo 2s infinite alternate;
 ">
 ✨
 </div>
@@ -663,6 +665,7 @@ position:absolute;
 top:50px;
 left:170px;
 font-size:25px;
+animation:brillo 2s infinite alternate;
 ">
 ✨
 </div>
@@ -672,6 +675,7 @@ position:absolute;
 top:130px;
 left:120px;
 font-size:25px;
+animation:brillo 2s infinite alternate;
 ">
 ✨
 </div>
@@ -681,59 +685,23 @@ position:absolute;
 top:110px;
 left:230px;
 font-size:25px;
+animation:brillo 2s infinite alternate;
 ">
 ✨
 </div>
 
 <div style="
 position:absolute;
-top:40px;
-left:90px;
-width:90px;
-height:2px;
-background:red;
-transform:rotate(20deg);
-opacity:0.6;
-">
-</div>
-
-<div style="
-position:absolute;
-top:80px;
-left:150px;
-width:80px;
-height:2px;
-background:red;
-transform:rotate(-15deg);
-opacity:0.6;
-">
-</div>
-
-<div style="
-position:absolute;
-top:120px;
-left:120px;
-width:110px;
-height:2px;
-background:red;
-transform:rotate(25deg);
-opacity:0.6;
-">
-</div>
-        
-<div style="
-position:absolute;
 top:70px;
-left:130px; 
+left:130px;
 font-size:90px;
-display:inline-block;
 animation:pulse 1.5s infinite;
-text-shadow:0 0 25px white;
+text-shadow:0 0 25px gold;
 ">
 ⭐
 </div>
 
-    </div>        
+</div>
 
 <style>
 
@@ -753,137 +721,20 @@ transform:scale(1);
 
 }
 
-.cielo-constelacion{
-
-position:relative;
-
-height:220px;
-width:350px;
-margin:auto;    
-
-}
-
-
-.estrella{
-
-position:absolute;
-
-font-size:25px;
-
-animation:brillar 2s infinite alternate;
-
-}
-
-
-.e1{
-top:20px;
-left:80px;
-}
-
-
-.e2{
-top:80px;
-left:30px;
-}
-
-
-.e3{
-top:50px;
-left:170px;
-}
-
-
-.e4{
-top:130px;
-left:120px;
-}
-
-
-.e5{
-top:110px;
-left:230px;
-}
-
-
-
-.linea{
-
-position:absolute;
-
-height:2px;
-
-background:white;
-
-transform-origin:left center;
-
-opacity:0.7;
-
-}
-
-
-
-.l1{
-
-width:90px;
-
-top:60px;
-
-left:60px;
-
-transform:rotate(25deg);
-
-}
-
-
-
-.l2{
-
-width:100px;
-
-top:90px;
-
-left:130px;
-
-transform:rotate(-20deg);
-
-}
-
-
-
-.l3{
-
-width:90px;
-
-top:90px;
-
-left:200px;
-
-transform:rotate(35deg);
-
-}
-
-
-
-@keyframes brillar{
+@keyframes brillo{
 
 from{
-
-opacity:0.5;
-
+opacity:0.4;
 }
 
 to{
-
 opacity:1;
-
 }
 
 }
 
 </style>
-    
-</style>
-    
+
 <p>
 En el cielo existen millones de estrellas,
 pero algunas logran llamar nuestra atención
@@ -921,7 +772,6 @@ Sigue brillando siempre,
 mi estrellita. ✨🌟
 </p>
 
-
 <div class="navegacion">
 
 <button onclick="anterior()">
@@ -933,16 +783,6 @@ Fin ✨
 </button>
 
 </div>
-
-</div>
-
-</div>
-</section>
-
-
-
-
-<script>
 
 
 // CREAR ESTRELLAS
