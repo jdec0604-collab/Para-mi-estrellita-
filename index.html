@@ -633,6 +633,27 @@ Final ➡
 
 <h2>🌌 Tu propia constelación ✨</h2>
 
+    <div class="cielo-constelacion">
+
+<div class="estrella e1">✨</div>
+
+<div class="estrella e2">✨</div>
+
+<div class="estrella e3">✨</div>
+
+<div class="estrella e4">✨</div>
+
+<div class="estrella e5">✨</div>
+
+
+<div class="linea l1"></div>
+
+<div class="linea l2"></div>
+
+<div class="linea l3"></div>
+
+</div>
+
 <div style="
 font-size:90px;
 display:inline-block;
@@ -660,6 +681,135 @@ transform:scale(1);
 
 }
 
+<style>
+
+.cielo-constelacion{
+
+position:relative;
+
+height:180px;
+
+}
+
+
+.estrella{
+
+position:absolute;
+
+font-size:25px;
+
+animation:brillar 2s infinite alternate;
+
+}
+
+
+.e1{
+top:20px;
+left:40px;
+}
+
+
+.e2{
+top:80px;
+left:90px;
+}
+
+
+.e3{
+top:30px;
+left:170px;
+}
+
+
+.e4{
+top:120px;
+left:220px;
+}
+
+
+.e5{
+top:70px;
+left:260px;
+}
+
+
+
+.linea{
+
+position:absolute;
+
+height:2px;
+
+background:white;
+
+transform-origin:left center;
+
+opacity:0.7;
+
+}
+
+
+
+.l1{
+
+width:90px;
+
+top:60px;
+
+left:60px;
+
+transform:rotate(25deg);
+
+}
+
+
+
+.l2{
+
+width:100px;
+
+top:90px;
+
+left:130px;
+
+transform:rotate(-20deg);
+
+}
+
+
+
+.l3{
+
+width:90px;
+
+top:90px;
+
+left:200px;
+
+transform:rotate(35deg);
+
+}
+
+
+
+@keyframes brillar{
+
+from{
+
+opacity:0.5;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+</style>
+    
 </style>
     
 <p>
