@@ -967,6 +967,11 @@ function siguiente(){
 
         paginas[paginaActual].classList.add("activa");
 
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });    
+
     }
 
 }
@@ -981,6 +986,11 @@ function anterior(){
         paginaActual--;
 
         paginas[paginaActual].classList.add("activa");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });    
 
     }
 
